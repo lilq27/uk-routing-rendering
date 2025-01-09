@@ -2,9 +2,9 @@ import NewsList from "@/components/news-list";
 import { DUMMY_NEWS } from "@/dummy-news";
 import { getNewsForYear } from "@/lib/new";
 
-export default function FilteredNewsPage({params}) {
-    const newsYear = params.year;
-    const news = getNewsForYear(newsYear);
+export default async function FilteredNewsPage({params}) {
+    const { year } = await params;
+    const news = getNewsForYear(year);
     return (
         <NewsList news={news}></NewsList>
     );

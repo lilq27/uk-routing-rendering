@@ -1,20 +1,14 @@
-import MainHeader from "../components/main-header";
-import "./globals.css";
+import './globals.css';
 
 export const metadata = {
-  title: "Next.js page Routing & Rendering",
-  description: "How to route to different pages",
+    title: 'Next.js Page Routing & Rendering',
+    description: 'Learn how to route to different pages.',
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className="">
-        <div id="page">
-          <MainHeader />
-          {children}
-        </div>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body>{children}</body>
+        </html>
+    );
 }

@@ -8,6 +8,8 @@ export default async function FilteredNewsPage({params}) {
     const { filter } = await params;
     console.log('filter', filter);
     //...filter => 일치하는 모든 경로 세그먼트의 배열을 담음
+    //해당 경로와 하위 모든 경로를 처리하며, URL의 나머지 경로를 배열로 캡처
+    //[폴더명]은 단일경로, [...폴더명]은 하위경로까지 동적 처리
 
     const selectedYear = filter?.[0];
     // ? => filter가 null 또는 undefined일 경우: undefined를 반환하고, 오류를 발생시키지 않음

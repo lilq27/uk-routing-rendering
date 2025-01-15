@@ -8,8 +8,8 @@ import NewsList from "@/components/news-list";
 import { getLatestNews } from "@/lib/new";
 
 //@폴더명 => 병렬 라우트
-export default function LatestNewsPage() {
-    const latestNews = getLatestNews();
+export default async function LatestNewsPage() {
+    const latestNews = await getLatestNews();
 
     return (
         <>
